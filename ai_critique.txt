@@ -1,0 +1,37 @@
+CRITIQUE DU CODE IA - RATIO DE SHARPE
+========================================
+
+PROMPT UTILISÉ :
+  "Write a Python function to calculate the annualized Sharpe ratio given
+   a series of daily returns."
+
+RÉPONSE TYPIQUE DE L'IA (ChatGPT) :
+--------------------------------------
+def sharpe_ratio(returns, risk_free_rate=0.0):
+    excess_returns = returns - risk_free_rate
+    return np.mean(excess_returns) / np.std(excess_returns) * np.sqrt(252)
+--------------------------------------
+
+TROIS FAILLES SUBSTANTIELLES IDENTIFIÉES :
+-------------------------------------------
+
+FAILLE 1 - Taux sans risque mal appliqué
+  Problème IA : L'IA soustrait le taux sans risque JOURNALIER directement
+                des rendements journaliers. Mais risk_free_rate=0.0 par défaut,
+                ce qui revient à ne pas l'utiliser du tout.
+  Notre solution : On annualise d'abord le rendement moyen (mean * 252), puis
+                   on soustrait le taux annualisé (ex: 2%). Cela respecte la
+                   formule officielle du ratio de Sharpe.
+
+FAILLE 2 - Écart-type biaisé (population vs échantillon)
+  Problème IA : np.std() sans argument utilise ddof=0 (diviseur N),
+                soit l'écart-type de la POPULATION.
+                Pour un échantillon financier, on doit utiliser ddof=1 (diviseur N-1).
+  Notre solution : self.returns.std() utilise ddof=1 par défaut dans pandas,
+                   ce qui est statistiquement correct pour un échantillon.
+
+FAILLE 3 - Absence de gestion des valeurs manquantes
+  Problème IA : La fonction ne vérifie pas si la série contient des NaN.
+                Un seul NaN rend np.mean() et np.std() inutilisables (résultat NaN).
+  Notre solution : On appelle .dropna() avant tout calcul (voir _calculate_returns()),
+                   ce qui garantit des résultats fiables quelles que soient les données.

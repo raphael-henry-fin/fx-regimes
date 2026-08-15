@@ -1,0 +1,20 @@
+JUSTIFICATION DU BENCHMARK CHOISI
+===================================
+
+Benchmark retenu : S&P 500 (SP500)
+
+Raison du choix :
+  1. Le S&P 500 est l'indice boursier américain le plus représentatif du marché
+     actions mondial. Il est universellement utilisé comme benchmark de référence.
+
+  2. Le taux de change USD/EUR est directement influencé par la santé économique
+     américaine, que le S&P 500 reflète bien. Quand les actions américaines montent,
+     la demande de dollars augmente, ce qui tend à apprécier le dollar.
+
+  3. Contrairement à un benchmark purement monétaire (ex: DXY), le S&P 500 permet
+     de mesurer la relation entre les marchés actions et le forex, ce qui est
+     pertinent pour les stratégies multi-actifs.
+
+Résultats de la régression OLS :
+  - R² : indique quelle fraction de la variance de DEXUSEU est expliquée par SP500
+  - Beta : sensibilité du taux de change aux mouvements du S&P 500

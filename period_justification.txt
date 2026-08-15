@@ -1,0 +1,24 @@
+JUSTIFICATION DES PÉRIODES CHOISIES
+=====================================
+
+Source visuelle : Graphique FRED - U.S. Dollars to Euro Spot Exchange Rate (DEXUSEU)
+URL : https://fred.stlouisfed.org/series/DEXUSEU
+
+PÉRIODE 1 : Bearish (baissière pour l'euro)
+  Dates    : 01/06/2021 → 26/09/2022
+  Contexte : Durant cette période, la Réserve Fédérale américaine (Fed) a amorcé
+             un cycle de hausse des taux d'intérêt agressif pour combattre l'inflation.
+             Des taux américains plus élevés rendent le dollar plus attractif.
+             En parallèle, la crise énergétique en Europe (guerre en Ukraine) a
+             fragilisé l'euro. Le taux USD/EUR est tombé sous la parité (< 1.00)
+             le 26 septembre 2022, un niveau historiquement bas.
+  Raison de sélection : Forte tendance directionnelle baissière visible clairement
+                        sur le graphique, idéale pour tester une stratégie défensive.
+
+PÉRIODE 2 : Bullish (haussière pour l'euro)
+  Dates    : 01/09/2024 → 31/12/2025
+  Contexte : La Fed a commencé à baisser ses taux à partir de septembre 2024,
+             réduisant l'attrait du dollar. L'économie européenne s'est stabilisée.
+             Le taux EUR/USD est remonté de ~1.05 à ~1.17.
+  Raison de sélection : Tendance haussière claire et soutenue, représentant
+                        un retournement structurel par rapport à la période 1.
