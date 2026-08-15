@@ -3,8 +3,6 @@ USD/EUR Exchange Rate Analysis Using FRED Data: Comparison of Risk Across Two Ma
 
 Isolated two opposite market regimes in the USD/EUR exchange rate and showed that volatility fails to separate them — Sharpe ratios of −2.18 and +0.20 sit on virtually identical volatility (6.59% vs 6.20%), across 1,840 trading sessions of FRED data analysed in Python.
 
-Université Paris-Dauphine, 2026.
-
 ## Key results
 
 - **Volatility does not discriminate:** 6.59% (bearish) vs 6.20% (bullish) — a 0.39 pt gap for returns of −12.36% and +3.27%
